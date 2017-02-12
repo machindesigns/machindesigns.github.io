@@ -1,11 +1,83 @@
-<!DOCTYPE html>
-<html lang="en-UK">
 <html>
-    <head>
-        
-    </head>
+
+    <h1>Score: </h1>
     
-    <body>
-    Hello!
-    </body>
+    <canvas id="game" width="800" height="600"></canvas>
+    
+    <script>
+        var canvas;
+        var canvascontext;
+        var cubesizeh=50;
+        var cubesizew=5;
+        
+        var ballw=10;
+        var ballh=10;
+        var ballx= 50;
+        var bally= 50;
+        var ballvelx=10;
+        var ballvely=5;
+        
+        var pad1x=20;
+        var pad1y=20;
+        var pad1w=15;
+        var pad1h=100;
+        
+        var pad2x;
+        var pad2y;
+        var pad2w=15;
+        var pad2h=100;
+        
+        window.onload =function() {
+            canvas= document.getElementById('game');
+            canvascontext=canvas.getContext('2d');
+            
+            pad2x=canvas.width-35;
+            
+            var fps=30;
+            setInterval(function(){moveobjects();drawobjects();}, 1000/fps);
+
+        }
+        
+        function moveobjects(){
+            ballx=ballx+ballvelx;
+            //bally=bally+ballvely;
+            
+            if(ballx>=canvas.width){
+                ballvelx=-ballvelx;
+            }
+            if(ballx<=0){
+                ballvelx=-ballvelx;
+            }
+            
+        }
+        
+        function drawobjects(){
+            makeit(0,0,canvas.width,canvas.height,'black')
+            
+            //line code
+            for(i=0; i<canvas.height; i +=80){
+                makeit(canvas.width/2-cubesizew/2,i,cubesizew,cubesizeh,'#3d3d3d');
+            }
+            
+            //Paddle1
+            makeit(pad1x,pad1y,pad1w,pad1h,'white');
+            
+            //Paddle2
+            pad2y=20;
+            makeit(pad2x,pad2y,pad2w,pad2h,'white');
+            
+            
+            //Ball
+            makeit(ballx,bally,ballw,ballh,'white');
+            
+        }
+        
+        function makeit(x,y,width,height,colour){
+            //background
+            canvascontext.fillStyle=colour;
+            canvascontext.fillRect(x,y,width,height);
+            
+        }
+    </script>
+    
 </html>
