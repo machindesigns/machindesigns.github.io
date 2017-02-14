@@ -1,83 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-UK">
 <html>
+    <head>
+        
+        
+        <style>
+            body {
+                background-color: azure;
+                background-repeat:no-repeat;
+                background-size: cover;
+                background-position: right top;
+                background-attachment: fixed;
+                background-image: url(null);
+                margin:0px;
+            }
 
-    <h1>Score: </h1>
-    
-    <canvas id="game" width="800" height="600"></canvas>
-    
-    <script>
-        var canvas;
-        var canvascontext;
-        var cubesizeh=50;
-        var cubesizew=5;
-        
-        var ballw=10;
-        var ballh=10;
-        var ballx= 50;
-        var bally= 50;
-        var ballvelx=10;
-        var ballvely=5;
-        
-        var pad1x=20;
-        var pad1y=20;
-        var pad1w=15;
-        var pad1h=100;
-        
-        var pad2x;
-        var pad2y;
-        var pad2w=15;
-        var pad2h=100;
-        
-        window.onload =function() {
-            canvas= document.getElementById('game');
-            canvascontext=canvas.getContext('2d');
-            
-            pad2x=canvas.width-35;
-            
-            var fps=30;
-            setInterval(function(){moveobjects();drawobjects();}, 1000/fps);
+        </style>
+        <link rel="icon" type="image/png" href="logo.svg" sizes="32x32">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>all.Social</title>
+        <!-- Logo colour: #00AA01-->
+        <script>
+            window.onload =function(){
 
-        }
-        
-        function moveobjects(){
-            ballx=ballx+ballvelx;
-            //bally=bally+ballvely;
-            
-            if(ballx>=canvas.width){
-                ballvelx=-ballvelx;
             }
-            if(ballx<=0){
-                ballvelx=-ballvelx;
-            }
-            
-        }
-        
-        function drawobjects(){
-            makeit(0,0,canvas.width,canvas.height,'black')
-            
-            //line code
-            for(i=0; i<canvas.height; i +=80){
-                makeit(canvas.width/2-cubesizew/2,i,cubesizew,cubesizeh,'#3d3d3d');
-            }
-            
-            //Paddle1
-            makeit(pad1x,pad1y,pad1w,pad1h,'white');
-            
-            //Paddle2
-            pad2y=20;
-            makeit(pad2x,pad2y,pad2w,pad2h,'white');
-            
-            
-            //Ball
-            makeit(ballx,bally,ballw,ballh,'white');
-            
-        }
-        
-        function makeit(x,y,width,height,colour){
-            //background
-            canvascontext.fillStyle=colour;
-            canvascontext.fillRect(x,y,width,height);
-            
-        }
-    </script>
+        </script>
+    </head>
     
+    <body>
+        <div class="topbar" id="topwrapper">
+            <div class="topbar" id="topbox">
+                <div id="imgwrapper">
+                    <a href="index.html">
+                        <div id="topimgbox">
+                            <img id="mainimg" src="logo.svg">
+                        </div>
+                    </a>
+                </div>
+                
+                <div id="scrollable">
+                    <div id="name" style="display:none;">
+                            <h1 class="mainfont">Aaron Machin</h1>
+                    </div>
+                    <a href="magda.html">
+                    <div class="topitem" id="object">
+                            <img id="innerimg" src="Capture.PNG" alt="img" title="Magdalena Oles">
+                    </div>
+                        </a>
+                    <div class="topitem" id="object">
+                    </div>
+                    <div class="topitem" id="object">
+                    </div>
+                    <div class="topitem" id="object">
+                    </div>
+                    <div class="topitem" id="object">
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="content" id="contentbox">
+            <div id="contentwrapper">
+                <div id="content1">
+                    
+                    <div id="timeago">
+                        <h1 class="mainfont" style="color:gray">3 Minutes Ago via Facebook</h1>
+                    </div>
+                    <div class="topitem" id="contentitem">
+                        <a href="magda.html"><img id="innerimg" src="Capture.PNG" alt="img" title="Magdalena Oles"></a>
+                    </div>
+                    <h1 class="mainfont">I love Aaron soooo much. Like, he is so cool. WOOOOOOOOOO! GO AARON AND GO EVERYTHING ABOUT AARON. This will forever be the first post on all.Social. You can't change that and I am happy.</h1>
+                </div>
+            </div>
+            
+            <div id="contentwrapper">
+                <div id="content1">
+                    
+                    <div id="timeago">
+                        <h1 class="mainfont" style="color:gray">3 Minutes Ago</h1>
+                    </div>
+                    <a href="magda.html">
+                    <div class="topitem" id="contentitem">
+                        <img id="innerimg" src="Capture.PNG" alt="img" title="Magdalena Oles">
+                    </div>
+                    </a>
+                    <h1 class="mainfont">I love Aaron soooo much. Like, he is so cool. WOOOOOOOOOO! GO AARON AND GO EVERYTHING ABOUT AARON. This will forever be the second post on all.Social. You can't change that and I am happy.</h1>
+                </div>
+            </div>
+            
+            <div id="contentwrapper">
+                <div id="content1">
+                    
+                    <div id="timeago">
+                        <h1 class="mainfont" style="color:gray">3 Minutes Ago</h1>
+                    </div>
+                    <div class="topitem" id="contentitem">
+                            <img id="innerimg" src="Capture.PNG" alt="img" title="Magdalena Oles">
+                    </div>
+                    <h1 class="mainfont">I love Aaron soooo much. Like, he is so cool. WOOOOOOOOOO! GO AARON AND GO EVERYTHING ABOUT AARON. This will forever be the third post on all.Social. You can't change that and I am happy.</h1>
+                </div>
+            </div>
+            
+            <div id="contentwrapper">
+                <div id="content1">
+                    
+                    <div id="timeago">
+                        <h1 class="mainfont" style="color:gray">A fucking while ago</h1>
+                    </div>
+                    <div class="topitem" id="contentitem">
+                            <img id="innerimg" src="Capture.PNG" alt="img" title="Magdalena Oles">
+                    </div>
+                    <h1 class="mainfont">I love Aaron soooo much. Like, he is so cool. WOOOOOOOOOO! GO AARON AND GO EVERYTHING ABOUT AARON. This will forever be the I can't be arsed after this post on all.Social. You can't change that and I am happy. Just testing the expandablity of these text boxes. This one is a special one, I know. Just thought it'd be a good idea... Then I started typing. Just like this, really. And this! Omg I'm doing it! #hitler</h1>
+                </div>
+            </div>
+            
+            <div id="contentwrapper">
+                <div id="content1">
+                    
+                    <div id="timeago">
+                        <h1 class="mainfont" style="color:gray">3 Minutes Ago</h1>
+                    </div>
+                    <div class="topitem" id="contentitem">
+                            <img id="innerimg" src="Capture.PNG" alt="img" title="Magdalena Oles">
+                    </div>
+                    <h1 class="mainfont">I love Aaron soooo much. Like, he is so cool. WOOOOOOOOOO! GO AARON AND GO EVERYTHING ABOUT AARON. This will forever be the second post on all.Social. You can't change that and I am happy.</h1>
+                </div>
+            </div>
+            
+            <div id="contentwrapper">
+                <div id="content1">
+                    
+                    <div id="timeago">
+                        <h1 class="mainfont" style="color:gray">3 Minutes Ago via Twitter</h1>
+                    </div>
+                    <div class="topitem" id="contentitem">
+                            <img id="innerimg" src="Capture.PNG" alt="img" title="Magdalena Oles">
+                    </div>
+                    <h1 class="mainfont">I love Aaron soooo much. Like, he is so cool. WOOOOOOOOOO! GO AARON AND GO EVERYTHING ABOUT AARON. This will forever be the second post on all.Social. You can't change that and I am happy.</h1>
+                </div>
+            </div>
+            
+            <div id="contentwrapper">
+                <div id="content1">
+                    
+                    <div id="timeago">
+                        <h1 class="mainfont" style="color:gray">3 Minutes Ago via Facebook</h1>
+                    </div>
+                    <div class="topitem" id="contentitem">
+                            <img id="innerimg" src="Capture.PNG" alt="img" title="Magdalena Oles">
+                    </div>
+                    <h1 class="mainfont">I love Aaron soooo much. Like, he is so cool. WOOOOOOOOOO! GO AARON AND GO EVERYTHING ABOUT AARON. This will forever be the second post on all.Social. You can't change that and I am happy.</h1>
+                </div>
+            </div>
+            
+            <div id="contentwrapper">
+                <div id="content1">
+                    
+                    <div id="timeago">
+                        <h1 class="mainfont" style="color:gray">3 Minutes Ago</h1>
+                    </div>
+                    <div class="topitem" id="contentitem">
+                            <img id="innerimg" src="Capture.PNG" alt="img" title="Magdalena Oles">
+                    </div>
+                    <h1 class="mainfont">I love Aaron soooo much. Like, he is so cool. WOOOOOOOOOO! GO AARON AND GO EVERYTHING ABOUT AARON. This will forever be the second post on all.Social. You can't change that and I am happy.</h1>
+                </div>
+            </div>
+            
+            <div id="contentwrapper">
+                <div id="content1">
+                    
+                    <div id="timeago">
+                        <h1 class="mainfont" style="color:gray">3 Minutes Ago</h1>
+                    </div>
+                    <div class="topitem" id="contentitem">
+                            <img id="innerimg" src="Capture.PNG" alt="img" title="Magdalena Oles">
+                    </div>
+                    <h1 class="mainfont">I love Aaron soooo much. Like, he is so cool. WOOOOOOOOOO! GO AARON AND GO EVERYTHING ABOUT AARON. This will forever be the second post on all.Social. You can't change that and I am happy.</h1>
+                </div>
+            </div>
+            
+            <div id="contentwrapper">
+                <div id="content1">
+                    
+                    <div id="timeago">
+                        <h1 class="mainfont" style="color:gray">3 Minutes Ago</h1>
+                    </div>
+                    <div class="topitem" id="contentitem">
+                            <img id="innerimg" src="Capture.PNG" alt="img" title="Magdalena Oles">
+                    </div>
+                    <h1 class="mainfont">I love Aaron soooo much. Like, he is so cool. WOOOOOOOOOO! GO AARON AND GO EVERYTHING ABOUT AARON. This will forever be the second post on all.Social. You can't change that and I am happy.</h1>
+                </div>
+            </div>
+            
+            <div id="contentwrapper">
+                <div id="content1">
+                    
+                    <div id="timeago">
+                        <h1 class="mainfont" style="color:gray">3 Minutes Ago</h1>
+                    </div>
+                    <div class="topitem" id="contentitem">
+                            <img id="innerimg" src="Capture.PNG" alt="img" title="Magdalena Oles">
+                    </div>
+                    <h1 class="mainfont">I love Aaron soooo much. Like, he is so cool. WOOOOOOOOOO! GO AARON AND GO EVERYTHING ABOUT AARON. This will forever be the second post on all.Social. You can't change that and I am happy.</h1>
+                </div>
+            </div>
+            
+            <div id="contentwrapper">
+                <div id="content1">
+                    
+                    <div id="timeago">
+                        <h1 class="mainfont" style="color:gray">3 Minutes Ago</h1>
+                    </div>
+                    <div class="topitem" id="contentitem">
+                            <img id="innerimg" src="Capture.PNG" alt="img" title="Magdalena Oles">
+                    </div>
+                    <h1 class="mainfont">I love Aaron soooo much. Like, he is so cool. WOOOOOOOOOO! GO AARON AND GO EVERYTHING ABOUT AARON. This will forever be the second post on all.Social. You can't change that and I am happy.</h1>
+                </div>
+            </div>
+            
+            <div id="contentwrapper">
+                <div id="content1">
+                    
+                    <div id="timeago">
+                        <h1 class="mainfont" style="color:gray">3 Minutes Ago</h1>
+                    </div>
+                    <div class="topitem" id="contentitem">
+                            <img id="innerimg" src="Capture.PNG" alt="img" title="Magdalena Oles">
+                    </div>
+                    <h1 class="mainfont">I love Aaron soooo much. Like, he is so cool. WOOOOOOOOOO! GO AARON AND GO EVERYTHING ABOUT AARON. This will forever be the second post on all.Social. You can't change that and I am happy.</h1>
+                </div>
+            </div>
+            
+        </div>
+        
+
+        
+    </body>
 </html>
