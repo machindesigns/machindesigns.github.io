@@ -3,24 +3,89 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
+        
+        <script type="text/javascript">
+            function visible(id){
+                var hiding=document.getElementById(id);
+                var donotdo=document.getElementById('openclose');
+                hiding.style.transition='margin 1s'
+                    if(hiding.style.marginLeft=='-90px'){
+                        hiding.style.marginLeft='0px';
+                        donotdo.style.backgroundImage='url(icons/30x30<.svg)'
+                    }
+                    else{
+                        hiding.style.marginLeft='-90px';
+                        donotdo.style.backgroundImage='url(icons/30x30>.svg)'
+                    }
+            }
+        </script>
     </head>
     
     <body>
-        <ul>
+        <div id="buttonwrapper">
+            <button onclick="visible('sidebar');" id="openclose"></button>
+        </div>
+        
+        
+        <ul id="sidebar">
+            
             <li>
-                <a class="active" href="index.html">
-                    <div id="homeicon">
+                <a class="active">
+                    <div id="search" class="icons" style="margin-bottom:-15px;">
                     </div>
                 </a> 
             </li>
             
             <li>
-                <a class="active" href="index.html">
-                    <div id="homeicon">
+                <a class="active" href="index.html" style="margin-top:30px;">
+                    <div id="homeicon" class="icons" style="background-color:#F18f3a">
                     </div>
                 </a> 
             </li>
-
+            
+            <li>
+                <a class="active">
+                    <div id="sms" class="icons" style="margin-top:30px;">
+                    </div>
+                </a> 
+            </li>
+            
+            <li>
+                <a class="active">
+                    <div id="settings" class="icons" style="margin-top:30px;">
+                    </div>
+                </a> 
+            </li>
         </ul>
+        
+        <div id="content">
+            <ul id="contentlist">
+                
+                <li>
+                    <div class="postwrapper">
+                        
+                        <div class="socialline">
+                            <ul id="sociallist">
+                                <li class="sociallistelement">
+                                    <div class="socialbutton" id="facebook">
+                                    </div>
+                                </li>
+                                <li class="sociallistelement">
+                                    <div class="socialbutton" id="twitter">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="innercontentwrapper">
+                            <div id="actualcontent">
+                                <text>Hello! So, this is a post on TopHat! Whatever that is, anyway! I think it looks cool and so I found it cool to do the cool thing of putting the cool thing of this on.You know I'm rambling to make sure that it shows the text properly, right? Like, you don't need to be reading this... but you are. Nerd.</text>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
     </body>
 </html>
