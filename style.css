@@ -62,11 +62,11 @@ text{
 }
 
 #facebook{
-    background-image: url(icons/30x30facebook.svg)
+    background-image: url(30x30facebook.svg)
 }
 
 #twitter{
-    background-image: url(icons/30x30twit.svg)
+    background-image: url(30x30twit.svg)
 }
 
 #innercontentwrapper{
@@ -113,7 +113,7 @@ text{
     transition: box-shadow 0.5s;
     box-shadow: 0px 0px 0.5px #8F8F8F;
     
-    background-image:url(icons/30x30%3C.svg);
+    background-image:url(30x30%3C.svg);
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
@@ -158,19 +158,19 @@ text{
 }
 
 #homeicon{
-    background-image: url(icons/30x30Feed.svg);
+    background-image: url(30x30Feed.svg);
 }
 
 #sms{
-    background-image: url(icons/30x30SMS.svg);
+    background-image: url(30x30SMS.svg);
 }
 
 #settings{
-    background-image: url(icons/30x30Settings.svg);
+    background-image: url(30x30Settings.svg);
 }
 
 #search{
-    background-image: url(icons/30x30Search.svg);
+    background-image: url(30x30Search.svg);
 }
 
 .icons{
